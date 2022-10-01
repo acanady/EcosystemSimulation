@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1938806468}
   - component: {fileID: 1938806470}
-  - component: {fileID: 1938806469}
+  - component: {fileID: 1574077634973283190}
   m_Layer: 0
   m_Name: Sensory Radius
   m_TagString: PreySensor
@@ -46,7 +46,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.00001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1938806469
+--- !u!114 &1574077634973283190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,13 +55,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1938806467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 628c2f0d1b185a74dbb3703b8803e335, type: 3}
+  m_Script: {fileID: 11500000, guid: 68ce1786ea6496e4390db05f596bf4d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sensoryRadiusCol: {fileID: 1938806470}
-  sensoryRadius: 4
-  entityBehaviour: {fileID: 309650552}
+  sensoryRadius: 8
   predatorsInRadius: 0
+  predators: []
+  entityBehaviour: {fileID: 309650555}
 --- !u!1 &859974151071861153
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +77,8 @@ GameObject:
   - component: {fileID: 309650549}
   - component: {fileID: 309650545}
   - component: {fileID: 309650546}
-  - component: {fileID: 309650552}
+  - component: {fileID: 309650555}
+  - component: {fileID: 309650556}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Prey
@@ -149,8 +151,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7560961, z: 1.3910179}
-  m_Center: {x: 0, y: 0.44194657, z: -0.04773903}
+  m_Size: {x: 1, y: 1.10306, z: 1.4743137}
+  m_Center: {x: 0, y: 0.61542857, z: -0.006091118}
 --- !u!114 &309650545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +166,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 0, z: 0}
-  entityBehaviour: {fileID: 309650552}
+  entityBehaviour: {fileID: 0}
+  calculatingPath: 0
+  lowerBound: 50
+  upperBound: 100
 --- !u!195 &309650546
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -175,7 +180,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -187,7 +192,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &309650552
+--- !u!114 &309650555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,11 +201,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 859974151071861153}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a882a58b94566764d81dd75af06a971f, type: 3}
+  m_Script: {fileID: 11500000, guid: 204a872683b538f4dbf7323e1a3174d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  predator: {fileID: 0}
-  prey: {fileID: 0}
+  flee: 0
+  chase: 0
+  Ecomanager: {fileID: 0}
+  fleeDirection: {x: 0, y: 0, z: 0}
+  predators: []
+--- !u!114 &309650556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859974151071861153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1581386ae4feb424d9f5c1ba2d3cccc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reproductionTestTimer: 10
+  ecoManager: {fileID: 0}
 --- !u!1 &859974151071861155
 GameObject:
   m_ObjectHideFlags: 0

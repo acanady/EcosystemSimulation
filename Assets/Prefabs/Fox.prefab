@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294499233}
   - component: {fileID: 294499235}
-  - component: {fileID: 294499234}
+  - component: {fileID: 4875037625310093062}
   m_Layer: 0
   m_Name: SensoryRadius
   m_TagString: PredatorSensor
@@ -46,7 +46,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.00001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &294499234
+--- !u!114 &4875037625310093062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,12 +55,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 294499232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 628c2f0d1b185a74dbb3703b8803e335, type: 3}
+  m_Script: {fileID: 11500000, guid: bda2109481797284c94a60fc9dfe3500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensoryRadiusCol: {fileID: 294499235}
-  sensoryRadius: 3
-  entityBehaviour: {fileID: 6656231875632522480}
+  sensoryRadiusCol: {fileID: 0}
+  sensoryRadius: 0
+  entityBehaviour: {fileID: 0}
   predatorsInRadius: 0
 --- !u!1 &2532967461089203873
 GameObject:
@@ -287,18 +287,18 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
-  m_AutoRepath: 1
+  m_AutoRepath: 0
   m_Height: 2
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &2310075747786230833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a882a58b94566764d81dd75af06a971f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flee: 0
+  chase: 0
+  Ecomanager: {fileID: 0}
   predator: {fileID: 0}
   prey: {fileID: 0}
 --- !u!1 &2532967461089203885
