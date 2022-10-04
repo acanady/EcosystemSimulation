@@ -10,6 +10,8 @@ TagManager:
   - PredatorParent
   - PredatorSensor
   - PreySensor
+  - Berry
+  - EcoManager
   layers:
   - Default
   - TransparentFX

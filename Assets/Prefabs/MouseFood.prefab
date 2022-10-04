@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 7905502253583537576}
   - component: {fileID: 2405394807562796080}
   - component: {fileID: 814465287984387017}
+  - component: {fileID: 13412704}
   m_Layer: 0
   m_Name: MouseFood
-  m_TagString: Untagged
+  m_TagString: Berry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8647,3 +8648,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &13412704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196719279100060780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da967e95a8f2994695f41f9d20ee338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GrowthTime: 50
+  foodEdible: 0
+  remainingTime: 0

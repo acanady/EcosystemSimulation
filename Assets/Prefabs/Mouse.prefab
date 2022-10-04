@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensoryRadiusCol: {fileID: 1938806470}
-  sensoryRadius: 8
+  sensoryRadius: 3
   predatorsInRadius: 0
   predators: []
   entityBehaviour: {fileID: 309650555}
@@ -79,6 +79,8 @@ GameObject:
   - component: {fileID: 309650546}
   - component: {fileID: 309650555}
   - component: {fileID: 309650556}
+  - component: {fileID: 3839941922546429447}
+  - component: {fileID: 3579122731613617960}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Prey
@@ -166,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 0, z: 0}
-  entityBehaviour: {fileID: 0}
+  entityBehaviour: {fileID: 309650555}
   calculatingPath: 0
   lowerBound: 50
   upperBound: 100
@@ -206,9 +208,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flee: 0
   chase: 0
+  hunger: 100
+  lifespan: 1000
+  walkingSpeed: 8
+  runningSpeed: 0
+  litterCount: 4
+  eating: 0
   Ecomanager: {fileID: 0}
   fleeDirection: {x: 0, y: 0, z: 0}
   predators: []
+  selectedFruit: {fileID: 0}
 --- !u!114 &309650556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,8 +230,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1581386ae4feb424d9f5c1ba2d3cccc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reproductionTestTimer: 10
+  reproductionTime: 100
+  remainingTime: 0
   ecoManager: {fileID: 0}
+  entityBehaviour: {fileID: 309650555}
+  mutationController: {fileID: 3839941922546429447}
+--- !u!114 &3839941922546429447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859974151071861153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5146d4d654acfcb4685e24e6831e54bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mutationAmount: 0.5
+  mutationChance: 0.2
+--- !u!114 &3579122731613617960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859974151071861153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3599fda31bbd9d4ab47798343aed710, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sensoryRadiusObj: {fileID: 1574077634973283190}
 --- !u!1 &859974151071861155
 GameObject:
   m_ObjectHideFlags: 0

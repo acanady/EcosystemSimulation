@@ -58,10 +58,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bda2109481797284c94a60fc9dfe3500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensoryRadiusCol: {fileID: 0}
-  sensoryRadius: 0
-  entityBehaviour: {fileID: 0}
-  predatorsInRadius: 0
+  sensoryRadiusCol: {fileID: 294499235}
+  sensoryRadius: 8
+  entityBehaviour: {fileID: 5612339497352236692}
 --- !u!1 &2532967461089203873
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +230,8 @@ GameObject:
   - component: {fileID: 2310075747786230833}
   - component: {fileID: 6656231875632522476}
   - component: {fileID: 6656231875632522474}
-  - component: {fileID: 6656231875632522480}
+  - component: {fileID: 5612339497352236692}
+  - component: {fileID: 4549843982697422457}
   m_Layer: 0
   m_Name: Fox
   m_TagString: Predator
@@ -287,7 +287,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -312,7 +312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movePosition: {x: 0, y: 0, z: 0}
-  entityBehaviour: {fileID: 6656231875632522480}
+  entityBehaviour: {fileID: 5612339497352236692}
+  calculatingPath: 0
+  lowerBound: 50
+  upperBound: 100
 --- !u!54 &6656231875632522476
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -342,7 +345,29 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.6030831, z: 2.811432}
   m_Center: {x: 0, y: 1.064441, z: 0.016553879}
---- !u!114 &6656231875632522480
+--- !u!114 &5612339497352236692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532967461089203883}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f74f206df205c45ac23505673a076e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flee: 0
+  chase: 0
+  hunger: 300
+  lifespan: 1000
+  walkingSpeed: 10
+  runningSpeed: 0
+  litterCount: 3
+  eating: 0
+  Ecomanager: {fileID: 0}
+  prey: {fileID: 0}
+--- !u!114 &4549843982697422457
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,14 +376,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2532967461089203883}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a882a58b94566764d81dd75af06a971f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1581386ae4feb424d9f5c1ba2d3cccc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flee: 0
-  chase: 0
-  Ecomanager: {fileID: 0}
-  predator: {fileID: 0}
-  prey: {fileID: 0}
+  reproductionTime: 100
+  remainingTime: 0
+  ecoManager: {fileID: 0}
+  entityBehaviour: {fileID: 5612339497352236692}
+  mutationController: {fileID: 0}
 --- !u!1 &2532967461089203885
 GameObject:
   m_ObjectHideFlags: 0

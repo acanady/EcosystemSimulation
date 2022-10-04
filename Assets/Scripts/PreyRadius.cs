@@ -25,7 +25,12 @@ public class PreyRadius : SensoryRadius
                 //Debug.Log("hit something: " + hitCollider.gameObject.name);
                 predatorsInRadius++;
                 predators.Add(hitCollider.gameObject);
-            }    
+            }
+
+            if (hitCollider.gameObject.tag.Equals("Berry"))
+            {
+                entityBehaviour.FruitSeen(hitCollider.gameObject);
+            }
         }
 
         if (predatorsInRadius > 0) { entityBehaviour.PredatorSeen(predators); }

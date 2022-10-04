@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent (typeof(SphereCollider))]
+[RequireComponent(typeof(SphereCollider))]
 public class SensoryRadius : MonoBehaviour
 {
     public SphereCollider sensoryRadiusCol;
     public int sensoryRadius;
+
+    public int EntitySensoryRadius { get { return sensoryRadius; } set { sensoryRadius = value; } }
     
 
     // Update is called once per frame

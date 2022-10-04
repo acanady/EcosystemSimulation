@@ -52,7 +52,7 @@ public class VectorVisualizer : MonoBehaviour
             {
                 fleeDirection += node.transform.position.normalized;
             }
-            arrow.SetPosition(0, fleeDirection.normalized * ArrowLength *-1);
+            arrow.SetPosition(0, fleeDirection.normalized * ArrowLength * -1);
     }
 
     // Update is called once per frame
