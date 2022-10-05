@@ -13,3 +13,7 @@ Using some licensed unity assets I created a world for my agents to live on. It'
 I started with a simple algorithm that used the position of the fox to calculate a direction vector away from the fox. The mouse used this vector and then moved in that direction. This, however, led to the mouse prioritizing only one predator and often running into the hungry mouth of another predator that so happened to be opposite the other fox. After a lot of trial and error, I stumbled upon a simple solution while testing; I add together the position vectors of the foxes and then calculate the flee direction vector from the resultant vector. This is a very naive solution however, and there are fox configurations that still result in the mouse running into another fox. Despite this, it's highly stable for a two fox system and only slightly off for a three fox system, so I'll accept the issues for now. *I hope to fix this in the near future by having mice "learn" to flee via neural nets.*
 
 ![Mouse Avoidance](MouseAvoidanceAlgorithm.gif)
+
+![Mice](mouseInfo.gif)
+
+![Foxes](foxInfo.gif)
