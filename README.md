@@ -24,4 +24,22 @@ The mouse is the prey in this simulation and is at the bottom of the food chain.
 * **Litter Count:** ```int``` value that controls how many offspring a mouse has at once.
 
 ![Foxes](foxInfo.gif)
-The fox is the predator in the simulation and at the top of the food chain. Like the mice they also have 4 traits that they inherit from their parents. These traits have a slight change (configuragle) to "mutate" (increase or decrease) 
+
+The fox is the predator in the simulation and at the top of the food chain. Like the mice they also have 4 traits that they inherit from their parents. These traits have a slight chance (configuragle) to "mutate" (increase or decrease) between generations.
+
+### Running Some Simulations
+
+Whats the worth of a simulation without some interesting tests. I extracted the data that was stored in the simulation and wrote it to a csv file so that it could
+be more easily visualized. Below you can see 4 seperate tests with gene variation turned off and only the prey present in the simulation (predators were turned off for these tests). As you can see in 2 of the 4 simulations the mice went extinct.
+
+![image](https://user-images.githubusercontent.com/19479468/194175021-65471f5c-4f07-47b4-a9b0-7d7d9fad6056.png)
+
+Here i ran simulations involving the sensory radius gene, I've provided the code that accounts for the chance of genetic variance as well.
+
+![image](https://user-images.githubusercontent.com/19479468/194175560-6e9ef8b4-a796-4f46-aeaa-7f06ffc9ed90.png)
+
+![image](https://user-images.githubusercontent.com/19479468/194175397-00256a94-b844-4545-b4f5-4ab1413fb948.png)
+
+Unsurprisingly we see an upward trend in the size of the sensory radius as time goes on, the sensory radius directly results in the prey being able to find food and (when present) avoid predators, these mice who are able to see omre about ehri surroundings were able to out perform those more short sighted mice. It's also important ot notice that the mouse population in this simulation appears to have a slight upward growth, perhaps over time we would see a more stable population than we did previously since these mice were better suited to the environment.
+
+
