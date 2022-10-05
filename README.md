@@ -15,5 +15,12 @@ I started with a simple algorithm that used the position of the fox to calculate
 ![Mouse Avoidance](MouseAvoidanceAlgorithm.gif)
 
 ![Mice](mouseInfo.gif)
+The mouse is the prey in this simulation and is at the bottom of the food chain. They eat berries that grow in the sim and reproduce when satisfied and their reproduction timers have hit 0. These 4 traits pictured are the traits that can vary in the simulation across different generations. As the mice continue to reproduce their offspring are better adapted to survive in the environment I created.
+
+*Sensory radius:* ```int``` value that controls the radius of which the mouse can see
+*Speed:* ```float``` value that controls how fast the entity moves
+*Hunger:* ```int``` value that controls how much a mouse can eat, a mouse that can eat alot can go longer without eating
+*Litter Count:* ```int``` value that controls how many offspring a mouse has at once.
 
 ![Foxes](foxInfo.gif)
+The fox is the predator in the simulation and at the top of the food chain. Like the mice they also have 4 traits that they inherit from their parents. These traits have a slight change (configuragle) to "mutate" (increase or decrease) 
