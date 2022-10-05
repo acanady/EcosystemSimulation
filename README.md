@@ -42,4 +42,7 @@ Here i ran simulations involving the sensory radius gene, I've provided the code
 
 Unsurprisingly we see an upward trend in the size of the sensory radius as time goes on, the sensory radius directly results in the prey being able to find food and (when present) avoid predators, these mice who are able to see more about their surroundings were able to out perform those more short sighted mice. It's also important ot notice that the mouse population in this simulation appears to have a slight upward growth, perhaps over time we would see a more stable population than we did previously since these mice were better suited to the environment.
 
+***
+
+Check out my other projects on my [website](https://acanady.github.io/#projects)
 
